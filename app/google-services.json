@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "362389484376",
+    "project_id": "pcarchitect-d80cd",
+    "storage_bucket": "pcarchitect-d80cd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362389484376:android:1fa97dd504d18280dcab2d",
+        "android_client_info": {
+          "package_name": "com.example.projectpcarchitectapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR3peVxXN-F8ShXKGeGEFyZ1n3oNqJH5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

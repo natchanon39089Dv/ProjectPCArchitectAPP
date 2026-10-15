@@ -49,12 +49,12 @@ fun CreatePC(
         Spacer(modifier = Modifier.height(24.dp))
 
         // TODO: component pickers (CPU, GPU, RAM, ...) go here
-        IconMenuButton(text =  "Select CPU",iconRes = R.drawable.memory_24dp_1f1f1f_fill0_wght400_grad0_opsz24 , onClick = onBack)
-        IconMenuButton(text = "Select MotherBoard", iconRes = R.drawable.ic_launcher_background,onBack)
-        IconMenuButton(text = "Select RAM", iconRes = R.drawable.memory_alt_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
-        IconMenuButton(text = "Select GPU", iconRes = R.drawable.desktop_windows_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
-        IconMenuButton(text = "Select PSU", iconRes = R.drawable.hard_drive_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
-        IconMenuButton(text = "select Case",iconRes = R.drawable.hard_disk_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
+        IconMenuButton(text =  "Select CPU",iconRes = R.drawable.memory_24dp_1f1f1f_fill0_wght400_grad0_opsz24 , onClick = {println("radar")})
+        IconMenuButton(text = "Select MotherBoard", iconRes = R.drawable.ic_launcher_background,{})
+        IconMenuButton(text = "Select RAM", iconRes = R.drawable.memory_alt_24dp_1f1f1f_fill0_wght400_grad0_opsz24,{})
+        IconMenuButton(text = "Select GPU", iconRes = R.drawable.desktop_windows_24dp_1f1f1f_fill0_wght400_grad0_opsz24,{})
+        IconMenuButton(text = "Select PSU", iconRes = R.drawable.hard_drive_24dp_1f1f1f_fill0_wght400_grad0_opsz24,{})
+        IconMenuButton(text = "select Case",iconRes = R.drawable.hard_disk_24dp_1f1f1f_fill0_wght400_grad0_opsz24,{})
         Spacer(modifier = Modifier.height(12.dp))
 
         MenuButton(text = "Back", onClick = onBack)
