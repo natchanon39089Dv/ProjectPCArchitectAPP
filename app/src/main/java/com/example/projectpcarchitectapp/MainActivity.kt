@@ -41,7 +41,12 @@ class MainActivity : ComponentActivity() {
                         }
                         composable("CreateNewPC") {
                             CreatePC(onBack = { navController.popBackStack() },
-                                     addCPU = {navController.navigate("addCPU")})
+                                    addCPU = {navController.navigate("addCPU")},
+                                    addRam = {navController.navigate(route="addRam")},
+                                    addPSU = {navController.navigate(route="addPSU")},
+                                    addGPU = {navController.navigate(route="addGPU")},
+                                    addMotherBoard = {navController.navigate(route="addMotherboard")},
+                                    addCASE = {navController.navigate(route="addCase")})
                         }
                         composable(route = "donate") {
                             Support(onBack = { navController.popBackStack() })
@@ -50,9 +55,32 @@ class MainActivity : ComponentActivity() {
                             loadCf(onBack = { navController.popBackStack() })
                         }
                         composable(route = "addCPU"){
+                            CreatePC(
+                                onBack = { navController.popBackStack() },
+                                addCPU = {},
+                                addMotherBoard = {},
+                                addRam = {},
+                                addGPU = {},
+                                addPSU = {},
+                                addCASE = {}
+
+                            )
+                        }
+                        composable(route = "addRam"){
 
                         }
+                        composable(route = "addPSU"){
 
+                        }
+                        composable(route = "addGPU"){
+
+                        }
+                        composable(route = "addMotherBoard") {
+
+                        }
+                        composable(route = "addCase"){
+
+                        }
                         }
                     }
                 }

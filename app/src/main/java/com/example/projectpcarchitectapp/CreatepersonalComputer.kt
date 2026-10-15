@@ -1,5 +1,6 @@
 package com.example.projectpcarchitectapp
 
+import android.R.attr.text
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,6 +23,11 @@ import com.example.projectpcarchitectapp.ui.theme.ProjectPCArchitectAPPTheme
 @Composable
 fun CreatePC(
     addCPU: () -> Unit,
+    addMotherBoard: () -> Unit,
+    addRam: () -> Unit,
+    addGPU: () -> Unit,
+    addPSU: () -> Unit,
+    addCASE: () -> Unit,
     onBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -43,7 +49,12 @@ fun CreatePC(
         Spacer(modifier = Modifier.height(24.dp))
 
         // TODO: component pickers (CPU, GPU, RAM, ...) go here
-
+        IconMenuButton(text =  "Select CPU",iconRes = R.drawable.memory_24dp_1f1f1f_fill0_wght400_grad0_opsz24 , onClick = onBack)
+        IconMenuButton(text = "Select MotherBoard", iconRes = R.drawable.ic_launcher_background,onBack)
+        IconMenuButton(text = "Select RAM", iconRes = R.drawable.memory_alt_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
+        IconMenuButton(text = "Select GPU", iconRes = R.drawable.desktop_windows_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
+        IconMenuButton(text = "Select PSU", iconRes = R.drawable.hard_drive_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
+        IconMenuButton(text = "select Case",iconRes = R.drawable.hard_disk_24dp_1f1f1f_fill0_wght400_grad0_opsz24,onBack)
         Spacer(modifier = Modifier.height(12.dp))
 
         MenuButton(text = "Back", onClick = onBack)
@@ -54,6 +65,7 @@ fun CreatePC(
 @Composable
 private fun CreatePCPreview() {
     ProjectPCArchitectAPPTheme {
-        CreatePC(onBack = {})
+        CreatePC(onBack = {}, addMotherBoard = {}, addRam = {}, addGPU = {}
+            , addPSU = {}, addCASE = {}, addCPU = {})
     }
 }
