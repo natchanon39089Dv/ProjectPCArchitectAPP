@@ -1,5 +1,7 @@
 package com.example.projectpcarchitectapp
 
+import android.view.Menu
+import androidx.annotation.Nullable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -24,12 +26,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.projectpcarchitectapp.ui.theme.ProjectPCArchitectAPPTheme
-
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 @Composable
 fun MainScreen(
+    onNavigateToSupport: () -> Unit,
+    onNavigateToLoadCF: () -> Unit,
     onBuildNewPC: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+
 ) {
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -52,7 +59,7 @@ fun MainScreen(
         MenuButton(text = "Build New PC Configuration", onClick = onBuildNewPC)
 
         Spacer(modifier = Modifier.height(12.dp))
-        MenuButton(text = "Load Configuration") { /* TODO */ }
+        MenuButton(text = "Load Configuration", onClick = onNavigateToLoadCF)
 
         Spacer(modifier = Modifier.height(12.dp))
         MenuButton(text = "Export Configuration") { /* TODO */ }
@@ -61,7 +68,7 @@ fun MainScreen(
         MenuButton(text = "Add New Component") { /* TODO */ }
 
         Spacer(modifier = Modifier.height(12.dp))
-        MenuButton(text = "Support This Project") { /* TODO */ }
+        MenuButton(text = "Support This Project", onClick = onNavigateToSupport)
     }
 }
 
@@ -90,6 +97,8 @@ fun MenuButton(text: String, onClick: () -> Unit) {
 @Composable
 private fun MainScreenPreview() {
     ProjectPCArchitectAPPTheme {
-        MainScreen(onBuildNewPC = {})
+        MainScreen(onBuildNewPC = {}, onNavigateToSupport = {}, onNavigateToLoadCF = {})
+
+
     }
 }

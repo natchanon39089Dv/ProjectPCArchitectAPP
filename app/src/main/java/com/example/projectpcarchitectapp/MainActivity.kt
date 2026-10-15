@@ -11,6 +11,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
 import com.example.projectpcarchitectapp.ui.theme.ProjectPCArchitectAPPTheme
 
@@ -32,14 +33,29 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(innerPadding)
                     ) {
                         composable("MainScreen") {
-                            MainScreen(onBuildNewPC = { navController.navigate("CreateNewPC") })
+                            MainScreen(
+                                onBuildNewPC = { navController.navigate("CreateNewPC") },
+                                onNavigateToSupport = { navController.navigate("donate") },
+                                onNavigateToLoadCF = {navController.navigate(route = "loadConfig")}
+                            )
                         }
                         composable("CreateNewPC") {
-                            CreatePC(onBack = { navController.popBackStack() })
+                            CreatePC(onBack = { navController.popBackStack() },
+                                     addCPU = {navController.navigate("addCPU")})
+                        }
+                        composable(route = "donate") {
+                            Support(onBack = { navController.popBackStack() })
+                        }
+                        composable("loadConfig"){
+                            loadCf(onBack = { navController.popBackStack() })
+                        }
+                        composable(route = "addCPU"){
+
+                        }
+
                         }
                     }
                 }
             }
         }
     }
-}

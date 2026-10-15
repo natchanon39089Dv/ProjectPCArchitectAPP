@@ -21,6 +21,7 @@ import com.example.projectpcarchitectapp.ui.theme.ProjectPCArchitectAPPTheme
 
 @Composable
 fun CreatePC(
+    addCPU: () -> Unit,
     onBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
