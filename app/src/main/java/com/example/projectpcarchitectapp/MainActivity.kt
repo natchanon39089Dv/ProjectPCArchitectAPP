@@ -142,7 +142,7 @@ class MainActivity : ComponentActivity() {
                             SelectComponentScreen(
                                 categoryTitle = "Select Motherboard",
                                 categoryKey = "Motherboard",
-                                iconRes = R.drawable.ic_launcher_background,
+                                iconRes = R.drawable.icons8_motherboard_96,
                                 builderViewModel = builderViewModel,
                                 onComponentSelected = { selectedComponent ->
                                     builderViewModel.selectMotherboard(selectedComponent)
@@ -170,7 +170,7 @@ class MainActivity : ComponentActivity() {
                             SelectComponentScreen(
                                 categoryTitle = "Select Graphics Card",
                                 categoryKey = "GPU",
-                                iconRes = R.drawable.desktop_windows_24dp_1f1f1f_fill0_wght400_grad0_opsz24,
+                                iconRes = R.drawable.icons8_video_card_50,
                                 builderViewModel = builderViewModel,
                                 onComponentSelected = { selectedComponent ->
                                     builderViewModel.selectGpu(selectedComponent)

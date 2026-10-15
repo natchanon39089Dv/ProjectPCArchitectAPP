@@ -83,7 +83,7 @@ fun CreatePC(
             title = "Motherboard",
             selectedName = buildState.motherboard?.name,
             selectedPrice = buildState.motherboard?.price,
-            iconRes = R.drawable.ic_launcher_background,
+            iconRes = R.drawable.icons8_motherboard_96,
             onClick = addMotherBoard,
             onDeselect = { builderViewModel.deselectComponent(PCComponentType.MOTHERBOARD) }
         )
@@ -101,7 +101,7 @@ fun CreatePC(
             title = "Graphics Card (GPU)",
             selectedName = buildState.gpu?.name,
             selectedPrice = buildState.gpu?.price,
-            iconRes = R.drawable.desktop_windows_24dp_1f1f1f_fill0_wght400_grad0_opsz24,
+            iconRes = R.drawable.icons8_video_card_50,
             onClick = addGPU,
             onDeselect = { builderViewModel.deselectComponent(PCComponentType.GPU) }
         )

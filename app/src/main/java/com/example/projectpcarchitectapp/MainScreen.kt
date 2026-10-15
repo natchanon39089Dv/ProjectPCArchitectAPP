@@ -117,7 +117,7 @@ fun MainScreen(
         DashboardMenuButton(
             title = "Build New PC Configuration",
             subtitle = "Select CPU, GPU, RAM, Motherboard & more",
-            iconRes = R.drawable.desktop_windows_24dp_1f1f1f_fill0_wght400_grad0_opsz24,
+            iconRes = R.drawable.icons8_video_card_50,
             onClick = onBuildNewPC
         )
 
